@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+results/figures/*
+results/metrics/*
+*.pt
+*.pth
+*.pkl
+*.joblib
+.idea/
