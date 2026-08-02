@@ -10,3 +10,5 @@ results/metrics/*
 *.pkl
 *.joblib
 .idea/
+*.pt
+$.pth
