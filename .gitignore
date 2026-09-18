@@ -10,6 +10,13 @@ results/metrics/*
 *.pkl
 *.joblib
 .idea/
+
+# Generated models
 *.pt
 $.pth
+
+# Dataset
 data/
+
+# Allow portfolio figures
+!results/figures/*.png
