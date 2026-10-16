@@ -1,0 +1,3 @@
+model	test_accuracy	trainable_parameters	training_time_seconds
+rully_connected	0.9747	109386	
+cnn	0.9892	206922	24.02

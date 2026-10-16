@@ -5,6 +5,7 @@ __pycache__/
 .ipynb_checkpoints/
 results/figures/*
 results/metrics/*
+!results/metrics/*.csv
 *.pt
 *.pth
 *.pkl
