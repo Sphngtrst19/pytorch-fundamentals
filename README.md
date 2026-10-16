@@ -22,3 +22,18 @@ pytorch-fundamentals/
 │   └── simple_neural_network.py
 ├── README.md
 └── requirements.txt
+```
+
+## Fully Connected vs CNN Comparison
+
+The fully connected neural network achieved 97.47% test accuracy on MNIST, while the convolutional neural network achieved 98.92%.
+
+The CNN improved accuracy by approximately 1.45 percentage points, demonstrating the benefit of preserving spatial image structure through convolutional layers.
+
+Although the CNN contained more trainable parameters, its improved generalization performance supports the expectation that convolutional architectures are better suited to image classification tasks than fully connected networks.
+
+| Model | Test Accuracy | Trainable Parameters |
+|---|---:|---:|
+| Fully Connected NN | 97.47% | 109,386 |
+| CNN | **98.92%** | 206,922 |
+
