@@ -226,6 +226,9 @@ def main():
     train_accuracies = []
     test_accuracies = []
 
+    if device.type == "mps":
+        torch.mps.synchronize()
+
     start_time = time.perf_counter()
 
     for epoch in range(EPOCHS):
@@ -280,6 +283,10 @@ def main():
             f"Test Accuracy: "
             f"{test_accuracy:.2%}"
         )
+
+
+    if device.type == "mps":
+        torch.mps.synchronize()
 
     training_time = (
         time.perf_counter() -

@@ -3,6 +3,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import torch
 import torch.nn as nn
+import time
 
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
@@ -220,6 +221,11 @@ def main():
     train_accuracies = []
     test_accuracies = []
 
+    if device.type == "mps":
+        torch.mps.synchronize()
+
+    start_time = time.perf_counter()
+
     for epoch in range(EPOCHS):
 
         train_loss, train_accuracy = (
@@ -267,6 +273,16 @@ def main():
             f"Test Accuracy: "
             f"{test_accuracy:.2%}"
         )
+
+    if device.type == "mps":
+        torch.mps.synchronize()
+
+    training_time = time.perf_counter() - start_time
+    
+    print(
+        f"\nTotal Training Time: "
+        f"{training_time:.2f} seconds"
+    )
 
     MODELS_DIR.mkdir(
         parents=True,
